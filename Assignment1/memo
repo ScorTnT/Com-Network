@@ -1,3 +1,12 @@
-#1 키값 생성 코드               Generator.py
-#2 키값 read & 암호문 생성 코드 Encryption.py
-#3 키값 read & 원문 생성 코드   Decrption.py
+#1 원문 read & 키값 생성 코드    KeyGenerator.py
+#2 암호화 코드                  Encryption.py
+#3 복호화 코드                  Decrption.py
+
+참고
+# english sentence >> https://post.naver.com/viewer/postView.nhn?volumeNo=28824023&memberNo=11456415
+# ascii to char, char to ascii >> https://lsjsj92.tistory.com/201
+# main function >> https://www.entity.co.kr/entry/51-Python-Main-%ED%95%A8%EC%88%98-%EB%B0%8F-%EB%A9%94%EC%86%8C%EB%93%9C-def-Main%EC%9D%98-%EC%9D%B4%ED%95%B4
+# init list >> https://application-s.tistory.com/entry/python-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EA%B0%92%EC%9D%84-%EC%A0%84%EB%B6%80-0%EC%9C%BC%EB%A1%9C-%EC%B4%88%EA%B8%B0%ED%99%94-%ED%95%98%EB%8A%94-%EB%B2%95
+# dictionary sort >> https://blog.naver.com/hankrah/221761664080
+# sorting solution >> https://python101.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-dict-%EC%A0%95%EB%A0%AC%ED%95%98%EB%8A%94-3%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95
+# tuple list to dict
