@@ -1,25 +1,4 @@
-def FileRead(route):
-    print("")
-    print("---File Open process---")
-    print("read file: " + route)
-    readF = open(route, 'r')
-    full = readF.read()
-    #print(full)
-    readF.close()
-    print("---File Closed---")
-    print("")
-    return full
-
-def FileWrite(route, des):
-    print("")
-    print("---File Open process---")
-    print("write file: " + route)
-    print("description: " + des)
-    writeF = open(route, 'w')
-    writeF.write(des)
-    writeF.close()
-    print("---File Closed---")
-    print("")
+import fileAcc as fA
 
 def letterCounter(descript_):
     #print(description)
@@ -53,17 +32,20 @@ def SortD(diction_):
 
 def main():
     description = ""
-    description = FileRead("Assignment1/description.txt")
+    description = fA.FileRead("description.txt")
     # print(description)
 
     orgCntLetter = {}
     orgCntLetter = letterCounter(description)
     # print(orgCntLetter)
 
+    writeDes = ""
     print("orgin")
     for i in orgCntLetter:
         print(str(i) + " = " + str(orgCntLetter[i]))
+        writeDes += (str(i) + " = " + str(orgCntLetter[i]) + "\n")
     print("")
+    fA.FileWrite("org.txt", writeDes)
 
     sortCnt = {}
     sortCnt = SortD(orgCntLetter)
@@ -80,8 +62,10 @@ def main():
         print(i + " >> " + k)
     # print(sortCnt.__len__())
     writeDes.strip()
-    FileWrite("Assignment1/key.txt", writeDes)
-    FileRead("Assignment1/key.txt")
-
+    fA.FileWrite("key.txt", writeDes)
+    # Key = fA.FileRead("key.txt")
+    # print("Key\n" + Key)
+    print("Success generate Key!!!")
+    
 if __name__=='__main__':
     main()

@@ -3,6 +3,7 @@
 #3 복호화 코드                  Decrption.py
 
 참고
+### keyGenerator
 # file access >> https://wikidocs.net/26
 # english sentence >> https://post.naver.com/viewer/postView.nhn?volumeNo=28824023&memberNo=11456415
 # ascii to char, char to ascii >> https://lsjsj92.tistory.com/201
@@ -12,3 +13,8 @@
 # sorting solution >> https://python101.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-dict-%EC%A0%95%EB%A0%AC%ED%95%98%EB%8A%94-3%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95
 # tuple list to dict >> https://security-nanglam.tistory.com/427
 # how to use twice param in for: (zip())>> https://nuggy875.tistory.com/129
+
+### Encryption
+# string split() >> https://www.geeksforgeeks.org/python-string-split/
+# remove char in str >> https://www.digitalocean.com/community/tutorials/python-remove-character-from-string
+### Decryption
