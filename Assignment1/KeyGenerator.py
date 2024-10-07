@@ -1,7 +1,7 @@
 def FileRead(route):
     print("")
     print("---File Open process---")
-    print(route)
+    print("read file: " + route)
     readF = open(route, 'r')
     full = readF.read()
     #print(full)
@@ -9,6 +9,17 @@ def FileRead(route):
     print("---File Closed---")
     print("")
     return full
+
+def FileWrite(route, des):
+    print("")
+    print("---File Open process---")
+    print("write file: " + route)
+    print("description: " + des)
+    writeF = open(route, 'w')
+    writeF.write(des)
+    writeF.close()
+    print("---File Closed---")
+    print("")
 
 def letterCounter(descript_):
     #print(description)
@@ -49,6 +60,7 @@ def main():
     orgCntLetter = letterCounter(description)
     # print(orgCntLetter)
 
+    print("orgin")
     for i in orgCntLetter:
         print(str(i) + " = " + str(orgCntLetter[i]))
     print("")
@@ -56,14 +68,20 @@ def main():
     sortCnt = {}
     sortCnt = SortD(orgCntLetter)
     # print(sortCnt)
-
+    writeDes = ""
+    
+    print("sorted")
     for i in sortCnt:
         print(str(i) + " = " + str(sortCnt[i]))
+        writeDes += (str(i) + " = " + str(sortCnt[i]) + "\n")
     
     print("")
     for i, k in zip(orgCntLetter, sortCnt):
-        print(i+ " >> "+k)
-    #print(sortCnt.__len__())
+        print(i + " >> " + k)
+    # print(sortCnt.__len__())
+    writeDes.strip()
+    FileWrite("Assignment1/key.txt", writeDes)
+    FileRead("Assignment1/key.txt")
 
 if __name__=='__main__':
     main()
