@@ -8,13 +8,13 @@ def FileRead(route):
     readF.close()
     print("---File Closed---")
     print("")
-    return full
+    return full.strip()
 
 def FileWrite(route, des):
     print("")
     print("---File Open process---")
     print("write file: " + route)
-    print("description: " + des)
+    # print("description: " + des)
     writeF = open(route, 'w')
     writeF.write(des)
     writeF.close()
