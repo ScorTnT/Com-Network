@@ -11,14 +11,14 @@ def cal(data, polyno):
             polyno = polyno<<1
     polyno = format(polyno,'b')
 
-    result = ""
+    result = ''
     for i in range(len(data)):
         if data[i] != polyno[i]:
-            result += "1"
+            result += '1'
         else:
-            result += "0"
+            result += '0'
     
-    return cal(int(result[result.find("1"):],2),int(org,2))
+    return cal(int(result[result.find('1'):],2),int(org,2))
 
 def formToint(polyno):
     result = 0
@@ -36,14 +36,15 @@ def formToint(polyno):
     return result
 
 def main():
-    commandA = "x+1+x2+x4" #input('다항식 입력')
-    commandB = int("1110110110010",2) #int(input('데이터 입력'),2)
+    commandA = 'x+1+x2+x4' #input('다항식 입력')
+    commandB = int('1110110110010',2) #int(input('전송 데이터 입력'),2)
     commandA = formToint(commandA)
+    print('전송 데이터: ' + format(commandB,'b'))
     result= cal(data=commandB, polyno=commandA)
     for i in range(len(format(commandA,'b'))):
-        commandB = commandB << 1
+        commandB <<= 1
     commandB += int(result,2)
-    print(format(commandB,'b'))
+    print('전송될 데이터: '+format(commandB,'b'))
     
 if __name__=='__main__':
     main()
