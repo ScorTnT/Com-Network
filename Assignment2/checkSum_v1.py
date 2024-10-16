@@ -45,8 +45,8 @@ def cal(a, b):
     return cal(result, org)
 
 def main():
-    commandA = 'x+1+x2+x4' #input('다항식 입력')
-    commandB = '1110110110010' #input('데이터 입력')
+    commandA = input('다항식 입력') # 'x+1+x2+x4'
+    commandB = input('전송 데이터 입력') # '1110110110010'
     print('전송 데이터: ' + commandB)
     commandA = str(formToBit(commandA))
     result = cal(commandB, commandA)
