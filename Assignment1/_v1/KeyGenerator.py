@@ -21,9 +21,6 @@ def letterCounter(descript_):
     print("")
     return makeDictionary
 
-def SortD(diction_,instruction):
-    return dict(sorted(diction_.items(),key=lambda x:x[instruction]))
-
 def main():
     description = ""
     description = fA.FileRead("description.txt")

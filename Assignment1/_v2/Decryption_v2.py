@@ -6,7 +6,7 @@ def main():
     keyVal = ''.join(sorted(key))
     keyDict = {}
     for i in range(len(key)):
-        keyDict[keyVal[i]] = key[i]
+        keyDict[key[i]] = keyVal[i]
 
     encDes = fA.FileRead("encrypt_v2.txt")
     decDes = ""
