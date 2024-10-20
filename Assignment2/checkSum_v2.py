@@ -22,6 +22,7 @@ def cal(data, polyno):
 def formToint(polyno):
     result = 0
     polyno = polyno.split('+')
+    
     for i in polyno:
         if 'x' in i:
             if i == 'x':
