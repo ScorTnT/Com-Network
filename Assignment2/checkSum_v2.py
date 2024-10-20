@@ -1,15 +1,14 @@
 def cal(data, polyno):
+    org = polyno
     data = format(data, 'b')
-    org = polyno = format(polyno, 'b')
-
+    polyno = format(polyno, 'b')
     if len(data) < len(polyno):
         return data
     else:
         gap = len(data)-len(polyno)
         polyno = int(polyno,2)
-        for i in range(gap):
-            polyno = polyno<<1
-    polyno = format(polyno,'b')
+        polyno = polyno<<gap
+        polyno = format(polyno,'b')
 
     result = ''
     for i in range(len(data)):
@@ -18,12 +17,12 @@ def cal(data, polyno):
         else:
             result += '0'
     
-    return cal(int(result[result.find('1'):],2),int(org,2))
+    return cal(int(result[result.find('1'):],2),org)
 
 def formToint(polyno):
     result = 0
     polyno = polyno.split('+')
-
+    print(polyno)
     for i in polyno:
         if 'x' in i:
             if i == 'x':
