@@ -2,6 +2,7 @@ def cal(data, polyno):
     org = polyno
     data = format(data, 'b')
     polyno = format(polyno, 'b')
+    print(data, polyno)
     if len(data) < len(polyno):
         return data
     else:
@@ -38,9 +39,9 @@ def main():
     commandA = input('다항식 입력') # 'x+1+x2+x4'
     commandB = int(input('전송 데이터 입력'),2) # int('1110110110010',2)
     commandA = formToint(commandA)
-    print('전송 데이터: ' + format(commandB,'b'))
+    commandB <<= len(format(commandA,'b'))-1
+    print('계산에 사용할 전송 데이터: ' + format(commandB,'b'))
     result= cal(data=commandB, polyno=commandA)
-    commandB <<= len(format(commandA,'b'))
     commandB += int(result,2)
     print('전송될 데이터: '+format(commandB,'b'))
     
